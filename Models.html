@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Updated CSS styles */
+.horizontal, .vertical {
+  width: 5%; /* Set width */
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: black; /* Set to solid black */
+}
+
+.horizontal {
+  top: 0;
+  left: 0;
+}
+
+.vertical {
+  top: 0;
+  right: 0;
+}
+
+/* Updated CSS styles for the inner gold bar */
+.gold-bar {
+  width: 90%; /* Adjusted width */
+  height: 500%; /* Adjusted height */
+  background-color: gold;
+  position: absolute;
+  top: 30%; /* Adjusted position */
+  left: 5%; /* Adjusted position */
+  z-index: 9998; /* Ensure it's below the black bar */
+  display: flex; /* Added to make boxes appear horizontally */
+  justify-content: space-around; /* Added to evenly space boxes */
+  align-items: center; /* Added to center boxes vertically */
+  flex-direction: column; /* Arrange boxes from top to bottom */
+
+}
+
+.intro, .email {
+  text-align: center;
+  font-size: 24px; /* Reset font size */
+  margin-top: 25px; /* Move all text sections 25 pixels down */
+  position: relative; /* Ensure text is positioned relative to the body */
+  padding: 10px 115px; /* Add padding to create space between text and side bars */
+}
+
+.intro {
+  font-size: 72px; /* Triple font size for the first paragraph */
+}
+
+body {
+  background-color: #FFFFF0;
+  margin: 0; /* Remove default margin */
+  overflow-y: scroll; /* Allow vertical scrolling */
+}
+
+h1, h2, h3, p {
+  color: blue; /* Change text color to blue */
+  text-align: center;
+  font-style: normal;
+  margin: 0; /* Remove default margin */
+}
+
+p {
+  font-family: Arial, Verdana, sans-serif;
+}
+
+/* New CSS styles for the boxes on the gold bar */
+.gold-box {
+  width: 1500px; /* Set width */
+  height: 1500px; /* Set height */
+  background-size: cover; /* Ensure the background image covers the entire box */
+  background-position: center; /* Center the background image horizontally and vertically */
+  background-blend-mode: multiply; /* Blend mode to multiply */
+}
+
+.email {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFFFF0; /* Match background color */
+  padding: 20px 0;
+}
+</style>
+</head>
+<body>
+
+<div class="horizontal"></div>
+<div class="vertical"></div>
+<div class="gold-bar">
+  <!-- New content for the gold bar with boxes -->
+  <div class="gold-box" style="background-image: url('Images/image 2.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Textures and lighting FINAL COMP v4.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Truck Render 2.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Truck Render 4.jpg');"></div>
+</div>
+<div class="horizontal"></div>
+<div class="vertical"></div>
+
+<div class="intro">
+  <p>Hi I am Sean Roge and I am a novice Game Designer interested in Video Game Design, Coding, and Artwork/Editing. Welcome to my Website!</p>
+</div>
+
+<h2> 
+  <p>My Education is largely based around digital media in general with a focus on modeling and Coding alongside Editing Videos and Audio.</p>
+</h2>
+
+<h2>
+  <p>So far my main skills are in programs such as Maya, Photoshop, and Adobe Animate alongside editors such as Premiere, and Coding Knowledge of C++ and some basic Java</p>
+</h2>
+
+<div class="email">
+  <p>for further contact email Fake@notRealemailadress to contact me about this bio.</p>
+</div>
+
+</body>
+</html>
