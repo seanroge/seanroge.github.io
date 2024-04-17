@@ -2,80 +2,92 @@
 <html>
 <head>
 <style>
-/* Updated CSS styles */
-.horizontal {
-  width: 5%; /* Smaller width */
+/* General and Structural Styling */
+.horizontal, .vertical {
+  width: 5%;
   height: 100%;
-  background-color: black;
   position: fixed;
+  z-index: 9999;
+  background-color: black;
+}
+
+.horizontal {
   top: 0;
   left: 0;
-  z-index: 9999;
+  right: 0;
+  height: 5%;
 }
 
 .vertical {
-  width: 5%; /* Smaller width */
-  height: 100%;
-  background-color: black;
-  position: fixed;
   top: 0;
-  right: 0; /* Change to right side */
-  z-index: 9999;
+  bottom: 0; /* Ensure it stretches fully down */
+  width: 5%;
 }
 
-/* Updated CSS styles for the inner gold bar */
+.vertical.left {
+  left: 0;
+}
+
+.vertical.right {
+  right: 0; /* Correct placement on the right */
+}
+
+/* Styling for the Gold Bar with responsive layout adjustments */
 .gold-bar {
-  width: 90%; /* Adjusted width */
-  height: 40%; /* Adjusted height */
+  width: 90%;
+  height: 40%;
   background-color: gold;
   position: absolute;
-  top: 30%; /* Adjusted position */
-  left: 5%; /* Adjusted position */
-  z-index: 9998; /* Ensure it's below the black bar */
+  top: 30%;
+  left: 5%;
+  right: 5%;
+  z-index: 9998;
+  display: flex;
+  flex-direction: row; /* Ensure links are in a row */
+  justify-content: space-around; /* Space links evenly */
+  align-items: center;
 }
 
 .intro, .email {
   text-align: center;
-  font-size: 24px; /* Reset font size */
-  margin-top: 25px; /* Move all text sections 25 pixels down */
-  position: relative; /* Ensure text is positioned relative to the body */
-  padding: 10px 115px; /* Add padding to create space between text and side bars */
+  font-size: 24px;
+  margin-top: 25px;
+  position: relative;
+  padding: 10px 5%; /* Responsive padding */
 }
 
 .intro {
-  font-size: 72px; /* Triple font size for the first paragraph */
+  font-size: 48px; /* Responsive font size */
 }
 
 body {
   background-color: #FFFFF0;
-  margin: 0; /* Remove default margin */
+  margin: 0;
+  overflow-y: scroll;
 }
 
 h1, h2, h3, p {
-  color: blue; /* Change text color to blue */
+  color: blue;
   text-align: center;
   font-style: normal;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 p {
   font-family: Arial, Verdana, sans-serif;
 }
 
-/* New CSS styles for the links on the gold bar */
+/* Link styling within the gold bar */
 .gold-link {
-  display: inline-block;
-  padding: 5px 0; /* Adjusted padding */
-  width: 24%; /* Set width to 22.5% */
-  height: 35%; /* Doubled height */
+  display: block;
+  padding: 5px 20px; /* Adjusted padding for better visual */
+  margin: 0 10px; /* Ensure links don't touch */
   background-color: blue;
   color: white;
   text-decoration: none;
-  margin: 175px 10px 0; /* Adjusted margin, added 50px margin-top */
-  box-sizing: border-box; /* Include padding in width calculation */
-  text-align: center; /* Center text horizontally */
-  font-size: 120px; /* Increased font size by 1.5 times */
-  line-height: 1.5; /* Set line height */
+  text-align: center;
+  font-size: 36px; /* Adjustable font size for readability */
+  line-height: 1.5;
 }
 
 .gold-link:hover {
@@ -83,32 +95,134 @@ p {
 }
 
 .email {
-  text-align: center;
-  font-size: 24px; /* Reset font size */
-  position: absolute;
-  bottom: 0; /* Align to the bottom */
-  width: 100%; /* Full width */
-  margin: 25px 0; /* Add some margin */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #FFFFF0;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 40%;
   position: fixed;
   top: 30%;
   left: 5%;
-  z-index: 9997; /* Ensure it's below the gold bar */
+  z-index: 9997;
 }
 
+/* Media Queries for Smaller Devices */
+@media (max-width: 768px) {
+  .intro {
+    font-size: 36px; /* Adjusted font size for medium devices */
+  }
+  .gold-link {
+    font-size: 24px; /* Smaller links for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  .horizontal, .vertical {
+    display: none; /* Hide bars on very small screens */
+  }
+
+  .gold-bar {
+    top: 0; /* Adjust the top to accommodate mobile viewing */
+    left: 0;
+    right: 0;
+    width: 100%; /* Full width for mobile devices */
+    height: auto; /* Auto-adjust height */
+    flex-direction: column; /* Stack links vertically on very small screens */
+  }
+
+/* Link styling within the gold bar */
+.gold-link {
+  display: block;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px; /* Base font size for readability */
+  padding: 25px 50px; /* Substantial padding for larger touch area */
+  margin: 10px auto; /* Center the links with auto margins */
+  min-width: 300px; /* Minimum width for each link to ensure larger clickable area */
+  box-sizing: border-box; /* Includes padding and border in the width calculation */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.gold-link:hover {
+  background-color: darkblue;
+}
+
+/* Styling for the gold bar */
+.gold-bar {
+  width: 90%;
+  background-color: gold;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  right: 5%;
+  z-index: 9998;
+  display: flex;
+  justify-content: space-around; /* Distributes children evenly */
+  align-items: center;
+  padding: 20px; /* Padding inside the gold bar */
+  flex-wrap: wrap; /* Allows items to wrap as needed */
+}
+
+@media (max-width: 768px) {
+  .gold-link {
+    font-size: 18px; /* Smaller font size for smaller devices */
+    padding: 20px 40px; /* Adjusted padding */
+    min-width: 250px; /* Adjusted minimum width */
+  }
+}
+
+@media (max-width: 480px) {
+  .gold-link {
+    font-size: 16px; /* Even smaller font size for mobile devices */
+    padding: 15px 30px; /* Reduced padding */
+    min-width: 200px; /* Further reduced minimum width for very small screens */
+  }
+
+  .gold-bar {
+    flex-direction: column; /* Stack links vertically on small screens */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gold-link {
+    font-size: 20px; /* Slightly smaller font size for smaller devices */
+    padding: 15px 25px; /* Slightly smaller padding */
+    min-width: 150px; /* Smaller minimum width */
+  }
+}
+
+@media (max-width: 480px) {
+  .gold-link {
+    font-size: 18px; /* Even smaller font size for mobile devices */
+    padding: 10px 20px; /* Reduce padding to fit smaller screens */
+    min-width: 120px; /* Minimum width for mobile */
+  }
+}
+
+
+
+  .intro {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+}
 </style>
 </head>
 <body>
 
 <div class="horizontal"></div>
-<div class="vertical"></div>
+<div class="vertical left"></div>
+<div class="vertical right"></div>
 <div class="gold-bar">
-  <!-- New content for the gold bar with hyperlinks -->
+  <!-- Hyperlinks within the gold bar -->
   <a class="gold-link" href="artwork.html">Artwork</a>
   <a class="gold-link" href="animation.html">Animation</a>
   <a class="gold-link" href="audio.html">Audio</a>
@@ -125,12 +239,8 @@ p {
   <p>My Education is largely based around digital media in general with a focus on modeling and Coding alongside Editing Videos and Audio.</p>
 </h2>
 
-<h2>
-  <p>So far my main skills are in programs such as Maya, Photoshop, and Adobe Animate alongside editors such as Premiere, and Coding Knowledge of C++ and some basic Java</p>
-</h2>
-
 <div class="email">
-  <p>for further contact email Fake@notRealemailadress to contact me about this bio.</p>
+  <p>For further contact email Fake@notRealemailadress to contact me about this bio.</p>
 </div>
 
 </body>
