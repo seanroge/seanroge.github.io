@@ -2,135 +2,143 @@
 <html>
 <head>
 <style>
-/* Updated CSS styles */
-.horizontal {
-  width: 5%; /* Smaller width */
-  height: 100%;
-  background-color: black;
+/* General styling for black bars */
+.horizontal, .vertical {
+  width: 5%; /* Set width for vertical bars */
+  height: 100%; /* Full height for vertical bars */
   position: fixed;
+  z-index: 9999;
+  background-color: black; /* Solid black color */
+}
+
+.horizontal {
   top: 0;
   left: 0;
-  z-index: 9999;
+  right: 0; /* Stretch the horizontal bar across the top */
+  height: 5%; /* Define a height for the horizontal bar */
 }
 
 .vertical {
-  width: 5%; /* Smaller width */
-  height: 100%;
-  background-color: black;
-  position: fixed;
   top: 0;
-  right: 0; /* Change to right side */
-  z-index: 9999;
+  bottom: 0; /* Stretch the vertical bar from top to bottom */
+  width: 5%; /* Define the width for consistency */
 }
 
-/* Updated CSS styles for the inner gold bar */
+.vertical.left {
+  left: 0; /* Position the left bar correctly */
+}
+
+.vertical.right {
+  right: 0; /* Keep right bar as is */
+}
+
+/* Styling for the gold bar section */
 .gold-bar {
-  width: 90%; /* Adjusted width */
-  height: 40%; /* Adjusted height */
+  width: 90%; /* Takes 90% of the viewport width */
+  min-height: 300px; /* Minimum height to ensure visibility */
   background-color: gold;
   position: absolute;
-  top: 30%; /* Adjusted position */
-  left: 5%; /* Adjusted position */
-  z-index: 9998; /* Ensure it's below the black bar */
+  top: 20%; /* Position below the horizontal bar */
+  left: 5%; /* Centering with equal margins */
+  right: 5%; /* Maintain distance from the right side */
+  z-index: 9998;
+  display: grid; /* Using grid layout */
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  grid-gap: 20px; /* Gap between elements */
+  padding: 20px; /* Padding inside the gold bar */
+  margin-bottom: 500px; /* Bottom margin to create space */
 }
 
+/* Intro and email div styles */
 .intro, .email {
   text-align: center;
-  font-size: 24px; /* Reset font size */
-  margin-top: 25px; /* Move all text sections 25 pixels down */
-  position: relative; /* Ensure text is positioned relative to the body */
-  padding: 10px 115px; /* Add padding to create space between text and side bars */
+  font-size: 24px; /* Standard font size */
+  margin-top: 25px; /* Margin to separate from other elements */
+  position: relative;
+  padding: 10px 115px; /* Internal spacing */
 }
 
 .intro {
-  font-size: 72px; /* Triple font size for the first paragraph */
+  font-size: 72px; /* Larger font size for emphasis */
 }
 
+.email {
+  position: fixed; /* Fix position to the bottom */
+  bottom: 10px; /* Align at the bottom with a buffer */
+  width: 100%; /* Full width */
+  padding: 10px 0; /* Padding for spacing */
+  background-color: #FFFFF0; /* Ensure it's visible over other content */
+}
+
+/* Body and text styling */
 body {
-  background-color: #FFFFF0;
+  background-color: #FFFFF0; /* Light background color */
   margin: 0; /* Remove default margin */
+  overflow-y: scroll; /* Enable vertical scrolling */
 }
 
 h1, h2, h3, p {
-  color: blue; /* Change text color to blue */
+  color: blue; /* Text color */
   text-align: center;
   font-style: normal;
   margin: 0; /* Remove default margin */
 }
 
 p {
-  font-family: Arial, Verdana, sans-serif;
+  font-family: Arial, Verdana, sans-serif; /* Font family */
 }
 
-/* New CSS styles for the links on the gold bar */
-.gold-link {
-  display: inline-block;
-  padding: 5px 0; /* Adjusted padding */
-  width: 24%; /* Set width to 22.5% */
-  height: 35%; /* Doubled height */
-  background-color: blue;
-  color: white;
-  text-decoration: none;
-  margin: 175px 10px 0; /* Adjusted margin, added 50px margin-top */
-  box-sizing: border-box; /* Include padding in width calculation */
-  text-align: center; /* Center text horizontally */
-  font-size: 120px; /* Increased font size by 1.5 times */
-  line-height: 1.5; /* Set line height */
+/* Styling for gold boxes with images */
+.gold-box {
+  width: 515px; /* Box width */
+  height: 430px; /* Box height */
+  background-size: 100% 100%; /* Adjust background size to fill area */
+  background-repeat: no-repeat; /* No repeat of the background image */
+  background-position: center; /* Center the background image */
 }
-
-.gold-link:hover {
-  background-color: darkblue;
-}
-
-.email {
-  text-align: center;
-  font-size: 24px; /* Reset font size */
-  position: absolute;
-  bottom: 0; /* Align to the bottom */
-  width: 100%; /* Full width */
-  margin: 25px 0; /* Add some margin */
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  width: 100%;
-  height: 40%;
-  position: fixed;
-  top: 30%;
-  left: 5%;
-  z-index: 9997; /* Ensure it's below the gold bar */
-}
-
 </style>
 </head>
 <body>
 
 <div class="horizontal"></div>
-<div class="vertical"></div>
+<div class="vertical left"></div>
+<div class="vertical right"></div>
 <div class="gold-bar">
-  <!-- New content for the gold bar with hyperlinks -->
-  <a class="gold-link" href="artwork.html">Artwork</a>
-  <a class="gold-link" href="animation.html">Animation</a>
-  <a class="gold-link" href="audio.html">Audio</a>
-  <a class="gold-link" href="models.html">Models</a>
+  <!-- Gold boxes with background images for three rows -->
+  <!-- Row 1 -->
+  <div class="gold-box" style="background-image: url('Images/image 2.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Textures and lighting FINAL COMP v4.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Truck Render 2.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Truck Render 4.jpg');"></div>
+  <!-- Row 2 -->
+  <div class="gold-box" style="background-image: url('Images/image 2.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Textures and lighting FINAL COMP v4.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Truck Render 2.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Truck Render 4.jpg');"></div>
+  <!-- Row 3 -->
+  <div class="gold-box" style="background-image: url('Images/image 2.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Textures and lighting FINAL COMP v4.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Truck Render 2.jpg');"></div>
+  <div class="gold-box" style="background-image: url('Images/Truck Render 4.jpg');"></div>
 </div>
-
-<div class="overlay"></div>
+<div class="horizontal"></div>
+<div class="vertical left"></div>
+<div class="vertical right"></div>
 
 <div class="intro">
-  <p>Hi I am Sean Roge and I am a novice Game Designer interested in Video Game Design, Coding, and Artwork/Editing. Welcome to my Website!</p>
+  <p>Artwork</p>
 </div>
 
-<h2> 
-  <p>My Education is largely based around digital media in general with a focus on modeling and Coding alongside Editing Videos and Audio.</p>
+<h2>
+  <p>My Education is largely based around digital media as such here are all the artwork and drawing I made.</p>
 </h2>
 
 <h2>
-  <p>So far my main skills are in programs such as Maya, Photoshop, and Adobe Animate alongside editors such as Premiere, and Coding Knowledge of C++ and some basic Java</p>
+  <p>Although not the best at times I more often then not can make sprite sheets and placeholder art for any project and should I be told to spend more time on it permanent artwork or assets.</p>
 </h2>
 
 <div class="email">
-  <p>for further contact email Fake@notRealemailadress to contact me about this bio.</p>
+  <p>For further contact, email Fake@notRealemailadress to contact me about this bio.</p>
 </div>
 
 </body>
