@@ -2,135 +2,171 @@
 <html>
 <head>
 <style>
-/* Updated CSS styles */
-.horizontal {
-  width: 5%; /* Smaller width */
+/* General and Structural Styling */
+.horizontal, .vertical {
+  width: 5%;
   height: 100%;
-  background-color: black;
   position: fixed;
+  z-index: 9999;
+  background-color: black;
+}
+
+.horizontal {
   top: 0;
   left: 0;
-  z-index: 9999;
+  right: 0;
+  height: 5%;
 }
 
 .vertical {
-  width: 5%; /* Smaller width */
-  height: 100%;
-  background-color: black;
-  position: fixed;
   top: 0;
-  right: 0; /* Change to right side */
-  z-index: 9999;
+  bottom: 0;
+  width: 5%;
 }
 
-/* Updated CSS styles for the inner gold bar */
+.vertical.left {
+  left: 0;
+}
+
+.vertical.right {
+  right: 0;
+}
+
+/* Styling for the Gold Bar */
 .gold-bar {
-  width: 90%; /* Adjusted width */
-  height: 40%; /* Adjusted height */
   background-color: gold;
   position: absolute;
-  top: 30%; /* Adjusted position */
-  left: 5%; /* Adjusted position */
-  z-index: 9998; /* Ensure it's below the black bar */
+  top: 20%; /* Increased top margin to avoid overlapping with the horizontal bar */
+  left: 5%;
+  right: 5%;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+  margin-bottom: 50px;
 }
 
 .intro, .email {
   text-align: center;
-  font-size: 24px; /* Reset font size */
-  margin-top: 25px; /* Move all text sections 25 pixels down */
-  position: relative; /* Ensure text is positioned relative to the body */
-  padding: 10px 115px; /* Add padding to create space between text and side bars */
+  font-size: 45px;
+  margin-top: 45px;
+  position: relative;
+  padding: 20px 5%;
 }
 
 .intro {
-  font-size: 72px; /* Triple font size for the first paragraph */
+  font-size: 48px; /* Adjusted for readability */
+}
+
+.email {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #FFFFF0;
 }
 
 body {
   background-color: #FFFFF0;
-  margin: 0; /* Remove default margin */
+  margin: 0;
+  overflow-y: scroll;
 }
 
 h1, h2, h3, p {
-  color: blue; /* Change text color to blue */
+  color: blue;
   text-align: center;
   font-style: normal;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 p {
   font-family: Arial, Verdana, sans-serif;
 }
 
-/* New CSS styles for the links on the gold bar */
-.gold-link {
-  display: inline-block;
-  padding: 5px 0; /* Adjusted padding */
-  width: 24%; /* Set width to 22.5% */
-  height: 35%; /* Doubled height */
-  background-color: blue;
-  color: white;
-  text-decoration: none;
-  margin: 175px 10px 0; /* Adjusted margin, added 50px margin-top */
-  box-sizing: border-box; /* Include padding in width calculation */
-  text-align: center; /* Center text horizontally */
-  font-size: 120px; /* Increased font size by 1.5 times */
-  line-height: 1.5; /* Set line height */
+/* Video Styling */
+.video-box {
+  width: 100%; /* Full width to ensure responsiveness */
+  margin-bottom: 20px;
 }
 
-.gold-link:hover {
-  background-color: darkblue;
+video {
+  width: 100%; /* Ensures the video scales correctly */
+  height: auto; /* Maintains the aspect ratio */
 }
 
-.email {
-  text-align: center;
-  font-size: 24px; /* Reset font size */
-  position: absolute;
-  bottom: 0; /* Align to the bottom */
-  width: 100%; /* Full width */
-  margin: 25px 0; /* Add some margin */
+/* Media Queries for Smaller Devices */
+@media (max-width: 768px) {
+  .intro {
+    font-size: 36px; /* Smaller font size for tablets */
+  }
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  width: 100%;
-  height: 40%;
-  position: fixed;
-  top: 30%;
-  left: 5%;
-  z-index: 9997; /* Ensure it's below the gold bar */
-}
+@media (max-width: 480px) {
+  .intro {
+    font-size: 24px; /* Smaller font size for phones */
+  }
 
+  .horizontal, .vertical {
+    display: none; /* Hide bars on very small screens */
+  }
+
+  .gold-bar {
+    top: 0; /* Adjust the top to accommodate mobile viewing */
+    left: 0;
+    right: 0;
+    width: 100%; /* Full width for mobile devices */
+    margin-bottom: 0;
+  }
+}
 </style>
 </head>
 <body>
 
 <div class="horizontal"></div>
-<div class="vertical"></div>
+<div class="vertical left"></div>
+<div class="vertical right"></div>
 <div class="gold-bar">
-  <!-- New content for the gold bar with hyperlinks -->
-  <a class="gold-link" href="artwork.html">Artwork</a>
-  <a class="gold-link" href="animation.html">Animation</a>
-  <a class="gold-link" href="audio.html">Audio</a>
-  <a class="gold-link" href="models.html">Models</a>
+  <!-- Video boxes with embedded videos -->
+  <div class="video-box">
+    <video controls>
+      <source src="videos/Final Animation CharAnimation.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-box">
+    <video controls>
+      <source src="videos/video 2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-box">
+    <video controls>
+      <source src="videos/Final Project v3_1_[0001-0240]_1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-box">
+    <video controls>
+      <source src="videos/Real Life Doodle Sean Roge.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 </div>
-
-<div class="overlay"></div>
+<div class="horizontal"></div>
+<div class="vertical left"></div>
+<div class="vertical right"></div>
 
 <div class="intro">
-  <p>Hi I am Sean Roge and I am a novice Game Designer interested in Video Game Design, Coding, and Artwork/Editing. Welcome to my Website!</p>
+  <p>Video's!</p>
 </div>
 
-<h2> 
-  <p>My Education is largely based around digital media in general with a focus on modeling and Coding alongside Editing Videos and Audio.</p>
-</h2>
-
 <h2>
-  <p>So far my main skills are in programs such as Maya, Photoshop, and Adobe Animate alongside editors such as Premiere, and Coding Knowledge of C++ and some basic Java</p>
+  <p>Here are a bunch of videos I made! most are jokes but they still are funny bits of animation and modeling.</p>
 </h2>
 
 <div class="email">
-  <p>for further contact email Fake@notRealemailadress to contact me about this bio.</p>
+  <p>For further contact, email Fake@notRealemailadress to contact me about this bio.</p>
 </div>
 
 </body>
