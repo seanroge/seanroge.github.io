@@ -36,32 +36,12 @@
   right: 0;
 }
 
-/* Styling for the Gold Bar */
-.gold-bar {
-  width: 89%;
-  background-color: gold;
-  position: absolute;
-  top: 45%;
-  left: 5%;
-  right: 5%;
-  z-index: 9998;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
 .intro, .email {
   text-align: center;
-  font-size: 24px;
-  margin-top: 25px;
+  font-size: 1.5vw;
+  margin-top: 1.5vw;
   position: relative;
   padding: 10px 5%; /* Responsive padding */
-}
-
-.intro {
-  font-size: 48px; /* Responsive font size */
 }
 
 body {
@@ -81,19 +61,6 @@ p {
   font-family: Arial, Verdana, sans-serif;
 }
 
-/* Link styling within the gold bar */
-.gold-link {
-  display: block;
-  padding: 5px 20px; /* Adjusted padding for better visual */
-  margin: 0 10px; /* Ensure links don't touch */
-  background-color: blue;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  font-size: 36px; /* Adjustable font size for readability */
-  line-height: 1.5;
-}
-
 .gold-link:hover {
   background-color: darkblue;
 }
@@ -108,10 +75,10 @@ p {
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
+  width: 90%;
   height: 40%;
   position: fixed;
-  top: 30%;
+  top: 30vh;
   left: 5%;
   z-index: 9997;
 }
@@ -126,20 +93,6 @@ p {
   }
 }
 
-@media (max-width: 480px) {
-  .horizontal, .vertical {
-    display: none; /* Hide bars on very small screens */
-  }
-
-  .gold-bar {
-    top: 0; /* Adjust the top to accommodate mobile viewing */
-    left: 0;
-    right: 0;
-    width: 100%; /* Full width for mobile devices */
-    height: auto; /* Auto-adjust height */
-    flex-direction: column; /* Stack links vertically on very small screens */
-  }
-
 /* Link styling within the gold bar */
 .gold-link {
   display: block;
@@ -147,10 +100,10 @@ p {
   color: white;
   text-decoration: none;
   text-align: center;
-  font-size: 20px; /* Base font size for readability */
-  padding: 25px 50px; /* Substantial padding for larger touch area */
-  margin: 10px auto; /* Center the links with auto margins */
-  min-width: 300px; /* Minimum width for each link to ensure larger clickable area */
+  font-size: 2vw; /* Base font size for readability */
+  padding: 1vw 3vw; /* Substantial padding for larger touch area */
+  margin: 1vw auto; /* Center the links with auto margins */
+  min-width: 5vw; /* Minimum width for each link to ensure larger clickable area */
   box-sizing: border-box; /* Includes padding and border in the width calculation */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
@@ -164,23 +117,15 @@ p {
   width: 90%;
   background-color: gold;
   position: absolute;
-  top: 30%;
-  left: 5%;
-  right: 5%;
+  top: 40vh;
+  left: 3%;
+  right: 15%;
   z-index: 9998;
   display: flex;
   justify-content: space-around; /* Distributes children evenly */
   align-items: center;
-  padding: 20px; /* Padding inside the gold bar */
+  padding: 2vw; /* Padding inside the gold bar */
   flex-wrap: wrap; /* Allows items to wrap as needed */
-}
-
-@media (max-width: 768px) {
-  .gold-link {
-    font-size: 18px; /* Smaller font size for smaller devices */
-    padding: 20px 40px; /* Adjusted padding */
-    min-width: 250px; /* Adjusted minimum width */
-  }
 }
 
 @media (max-width: 480px) {
@@ -198,24 +143,27 @@ p {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .gold-link {
-    font-size: 20px; /* Slightly smaller font size for smaller devices */
-    padding: 15px 25px; /* Slightly smaller padding */
-    min-width: 150px; /* Smaller minimum width */
+    font-size: 25px; /* Slightly smaller font size for smaller devices */
+    padding: 4px 35px; /* Slightly smaller padding */
+    min-width: 4px; /* Smaller minimum width */
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 48vw) {
   .gold-link {
-    font-size: 18px; /* Even smaller font size for mobile devices */
-    padding: 10px 20px; /* Reduce padding to fit smaller screens */
-    min-width: 120px; /* Minimum width for mobile */
+    font-size: 25px; /* Slightly smaller font size for smaller devices */
+    padding: 4px 40px; /* Slightly smaller padding */
+    min-width: 4px; /* Smaller minimum width */
   }
 }
-
-
 
   .intro {
-    font-size: 24px; /* Smaller font size for mobile */
+    font-size: 6vw; /* Smaller font size for mobile */
+  }
+}
+
+  .body {
+    font-size: 6vw; /* Smaller font size for mobile */
   }
 }
 </style>
@@ -236,15 +184,15 @@ p {
 <div class="overlay"></div>
 
 <div class="intro">
-  <p>Hi, I am Sean Roge and I am a novice Game Designer interested in Video Game Design, Coding, and Artwork/Editing. Welcome to my Website!</p>
+  <p>Sean Roge</p>
 </div>
 
-<h2> 
-  <p>My Education is largely based around digital media in general with a focus on modeling and Coding alongside Editing Videos and Audio.</p>
-</h2>
+<div class="body">
+  <p>Video Game Design, Coding, and Artwork/Editing.</p>
+</div>
 
 <div class="email">
-  <p>For further contact email Fake@notRealemailadress to contact me about this bio.</p>
+  <p>For further contact email sean@roge.me to contact me about this bio.</p>
 </div>
 
 </body>
