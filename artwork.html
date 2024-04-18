@@ -5,15 +5,15 @@
 
 /* Styling for the gold bar section */
 .gold-bar {
-  width: 90%; /* Keeps the width relative to the viewport width */
+  width: 100%; /* Keeps the width relative to the viewport width */
   background-image: url('Images/Simple blue back.png');
   background-size: cover; /* This will cover the entire area but maintain the aspect ratio */
   background-repeat: no-repeat;
   background-position: center; /* Center the background image */
   position: absolute;
   top: 27.5%; /* Adjusted to eliminate any gap */
-  left: 5%; /* Consistent with the hyperlinks-bar */
-  right: 1%; /* Consistent with the hyperlinks-bar */
+  left: 0%; /* Consistent with the hyperlinks-bar */
+  right: 0%; /* Consistent with the hyperlinks-bar */
   z-index: 9997; /* Ensure it does not overlap the hyperlinks-bar inappropriately */
   display: grid;
   grid-auto-rows: minmax(150px, auto); /* Ensures rows have a minimum height but can grow */
@@ -39,24 +39,13 @@
 }
 
 .intro {
-  font-size: 6vw; /* Responsive font size for mobile */
+  font-size: 6vh; /* Responsive font size for mobile */
   width: 80%; /* Adjusted width for better layout control */
   margin: auto; /* Center align the div within its container */
-}
-
-.email {
-  font-size: 24px; /* Ensure font size is consistent for email */
-  width: 80%; /* Adjusted width for better layout control */
-  margin: auto; /* Center align the div within its container */
-  position: fixed;
-  bottom: 10px; /* Align at the bottom with a buffer */
-  left: 10%; /* Buffer from the left side */
-  right: 10%; /* Buffer from the right side */
-  background-color: #FFFFF0; /* Ensure it's visible over other content */
 }
 
 .body {
-  font-size: 2vw; /* Responsive font size for mobile */
+  font-size: 3vh; /* Responsive font size for mobile */
   width: 80%; /* Adjusted width for better layout control */
   margin: 2px auto; /* Center align and provide vertical spacing */
 }
@@ -66,14 +55,6 @@
   .intro, .email, .body {
     font-size: 5vw; /* Slightly smaller font size for smaller devices */
   }
-}
-
-.email {
-  position: fixed; /* Fix position to the bottom */
-  bottom: 10px; /* Align at the bottom with a buffer */
-  width: 100%; /* Full width */
-  padding: 10px 0; /* Padding for spacing */
-  background-color: #FFFFF0; /* Ensure it's visible over other content */
 }
 
 /* Body and text styling */
@@ -105,12 +86,12 @@ p {
 }
 
 .hyperlinks-bar {
-  width: 89%;
+  width: 100%;
   background-color: gold;
   position: absolute;
   top: 20%;
-  left: 4.5%;
-  right: 5%;
+  left: 0%;
+  right: 0%;
   z-index: 9998;
   display: flex;
   justify-content: space-around;
@@ -173,10 +154,6 @@ p {
 
 <div class="body">
   <p>My Education is largely based on digital media as such here are all the artwork and drawings I made.</p>
-</div>
-
-<div class="email">
-  <p>For further contact, email sean@roge.me to contact me about this bio.</p>
 </div>
 
 </body>

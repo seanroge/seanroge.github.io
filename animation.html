@@ -2,39 +2,6 @@
 <html>
 <head>
 <style>
-/* General and Structural Styling */
-.horizontal, .vertical {
-  width: 5%;
-  height: 100%;
-  position: fixed;
-  z-index: 9999;
-  background-image: url('Images/Simple Design alt.png'); /* Path to your image file */
-  background-size: cover; /* Cover the entire area of the bar */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: center; /* Center the image in the element */
-}
-
-.horizontal {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5%;
-}
-
-.vertical {
-  top: 0;
-  bottom: 0;
-  width: 5%;
-}
-
-.vertical.left {
-  left: 0;
-}
-
-.vertical.right {
-  right: 0;
-}
-
 /* Styling for the Gold Bar */
 .gold-bar {
   background-image: url('Images/Simple red back.png'); /* Update with the correct path to your image */
@@ -43,8 +10,8 @@
   background-position: center; /* Center the background image */
   position: absolute;
   top: 27.5%;
-  left: 5%;
-  right: 5%;
+  left: 0%;
+  right: 0%;
   z-index: 9998;
   display: flex;
   flex-direction: column;
@@ -68,14 +35,6 @@
   position: relative;
   padding: 20px 5%; /* Ample padding and proportional horizontal padding */
   color: red; /* Temporarily changing color to test if this CSS is applied */
-}
-
-.email {
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
-  padding: 10px 0;
-  background-color: #FFFFF0;
 }
 
 body {
@@ -131,12 +90,12 @@ video {
   }
 } 
 .hyperlinks-bar {
-  width: 89%;
+  width: 100%;
   background-color: gold;
   position: absolute;
   top: 20%;
-  left: 4.5%;
-  right: 5%;
+  left: 0%;
+  right: 0%;
   z-index: 9998;
   display: flex;
   justify-content: space-around;
@@ -208,10 +167,6 @@ video {
 <h2>
   <p>Here are a bunch of videos I made! most are jokes but they still are funny bits of animation and modeling.</p>
 </h2>
-
-<div class="email">
-  <p>For further contact, email Fake@notRealemailadress to contact me about this bio.</p>
-</div>
 
 </body>
 </html>

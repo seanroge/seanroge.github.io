@@ -2,47 +2,6 @@
 <html>
 <head>
 <style>
-/* General and Structural Styling */
-.horizontal, .vertical {
-  width: 5%;
-  height: 100%;
-  position: fixed;
-  z-index: 9999;
-  background-image: url('Images/Simple Design alt.png'); /* Path to your image file */
-  background-size: cover; /* Cover the entire area of the bar */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: center; /* Center the image in the element */
-}
-
-.horizontal {
-  width: 5%;
-  position: fixed;  /* Ensures the bar stays in a fixed position on scroll */
-  left: 0;  /* You can change this to 'right: 0;' if you want it on the right */
-  top: 0%;  /* You can adjust this value to position the bar vertically */
-  height: 100%;  /* Adjust this value to control the height of the bar */
-  background-color: #000;  /* Example color */
-  z-index: 9999;
-}
-
-.vertical {
-  width: 6%;
-  position: fixed;  /* Ensures the bar stays in a fixed position on scroll */
-  left: 95vw;  /* You can change this to 'right: 0;' if you want it on the right */
-  top: 0%;  /* You can adjust this value to position the bar vertically */
-  height: 100%;  /* Adjust this value to control the height of the bar */
-  background-color: #000;  /* Example color */
-  z-index: 9999;
-}
-
-.vertical.left {
-  left: 0;
-}
-
-.vertical.right {
-  right: 0;
-}
-
-
 /* Styling for the gold bar section */
 .gold-bar {
   width: 100%; /* Automatically adjust width based on left and right offsets */
@@ -52,8 +11,8 @@
   background-position: center; /* Center the background image */
   position: absolute;
   top: 27.5%; /* Position from the top */
-  left: 5%; /* Left margin */
-  right: 9%; /* Right margin */
+  left: 0%; /* Left margin */
+  right: 0%; /* Right margin */
   z-index: 9997; /* High z-index to prevent overlap */
   padding: 55px; /* Padding inside the gold bar */
   margin-bottom: 50px; /* Bottom margin to create space below */
@@ -62,7 +21,7 @@
 
 /* Responsive grid setup for gold boxes */
 .gold-box {
-  width: 90%;  /* Starting width percentage of the viewport */
+  width: 100%;  /* Starting width percentage of the viewport */
   height: auto;  /* Height adjusts to maintain aspect ratio */
   aspect-ratio: 4 / 3;  /* Maintain aspect ratio */
   background-size: cover;
@@ -72,7 +31,7 @@
 
 .intro {
   text-align: center;
-  font-size: 2vw;  /* Responsive font size for introductory text */
+  font-size: 3vw;  /* Responsive font size for introductory text */
   width: 90%;  /* Max width to fit within the viewport */
   margin: 20px auto;  /* Centering intro text */
   padding: 10px; /* Padding for spacing */
@@ -87,12 +46,12 @@
 }
 
 .hyperlinks-bar {
-  width: 90%;
+  width: 100%;
   background-color: gold;
   position: absolute;
   top: 20%;
-  left: 4.5%;
-  right: 5%;
+  left: 0%;
+  right: 0%;
   z-index: 9998;
   display: flex;
   justify-content: space-around;
@@ -109,7 +68,7 @@
   color: white;
   text-decoration: none;
   text-align: center;
-  font-size: 3vw; /* Adjustable font size for readability */
+  font-size: 36px; /* Adjustable font size for readability */
   line-height: 1.5;
 }
 
@@ -137,15 +96,11 @@
 </div>
 
 <div class="intro">
-  <p>Models.</p>
+  <p>Models</p>
 </div>
 
 <div class="body">
   <p>Here are my Models, the first a digital scene and the second a physical sculpture that I both made, So far my main skills are still in game design more than modeling.</p>
-</div>
-
-<div class="email">
-  <p>for further contact email Fake@notRealemailadress to contact me about this bio.</p>
 </div>
 
 </body>
