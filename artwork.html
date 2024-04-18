@@ -2,38 +2,6 @@
 <html>
 <head>
 <style>
-/* General and Structural Styling */
-.horizontal, .vertical {
-  width: 5%;
-  height: 100%;
-  position: fixed;
-  z-index: 9999;
-  background-image: url('Images/Simple Design alt.png'); /* Path to your image file */
-  background-size: cover; /* Cover the entire area of the bar */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: center; /* Center the image in the element */
-}
-
-.horizontal {
-  top: 0;
-  left: 0;
-  right: 0; /* Stretch the horizontal bar across the top */
-  height: 5%; /* Define a height for the horizontal bar */
-}
-
-.vertical {
-  top: 0;
-  bottom: 0; /* Stretch the vertical bar from top to bottom */
-  width: 5%; /* Define the width for consistency */
-}
-
-.vertical.left {
-  left: 0; /* Position the left bar correctly */
-}
-
-.vertical.right {
-  right: 0; /* Keep right bar as is */
-}
 
 /* Styling for the gold bar section */
 .gold-bar {
@@ -45,7 +13,7 @@
   position: absolute;
   top: 27.5%; /* Adjusted to eliminate any gap */
   left: 5%; /* Consistent with the hyperlinks-bar */
-  right: 5%; /* Consistent with the hyperlinks-bar */
+  right: 1%; /* Consistent with the hyperlinks-bar */
   z-index: 9997; /* Ensure it does not overlap the hyperlinks-bar inappropriately */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid setup */
