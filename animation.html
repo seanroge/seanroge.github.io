@@ -8,7 +8,10 @@
   height: 100%;
   position: fixed;
   z-index: 9999;
-  background-color: black;
+  background-image: url('Images/Simple Design alt.png'); /* Path to your image file */
+  background-size: cover; /* Cover the entire area of the bar */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center; /* Center the image in the element */
 }
 
 .horizontal {
@@ -34,16 +37,19 @@
 
 /* Styling for the Gold Bar */
 .gold-bar {
-  background-color: red;
+  background-image: url('Images/Simple red back.png'); /* Update with the correct path to your image */
+  background-size: cover; /* This will cover the entire area but maintain the aspect ratio */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the background image */
   position: absolute;
-  top: 20%; /* Increased top margin to avoid overlapping with the horizontal bar */
+  top: 20%;
   left: 5%;
   right: 5%;
   z-index: 9998;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px;
+  padding: 100px; /* You can adjust this padding based on your design needs */
   margin-bottom: 50px;
 }
 
@@ -56,7 +62,12 @@
 }
 
 .intro {
-  font-size: 48px; /* Adjusted for readability */
+  text-align: center;
+  font-size: 88px; /* Ensuring a large font size */
+  margin-top: 25px; /* Space above the text */
+  position: relative;
+  padding: 20px 5%; /* Ample padding and proportional horizontal padding */
+  color: red; /* Temporarily changing color to test if this CSS is applied */
 }
 
 .email {

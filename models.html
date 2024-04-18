@@ -2,13 +2,16 @@
 <html>
 <head>
 <style>
-/* Updated CSS styles */
+/* General and Structural Styling */
 .horizontal, .vertical {
-  width: 5%; /* Set width */
+  width: 5%;
   height: 100%;
   position: fixed;
   z-index: 9999;
-  background-color: black; /* Set to solid black */
+  background-image: url('Images/Simple Design alt.png'); /* Path to your image file */
+  background-size: cover; /* Cover the entire area of the bar */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center; /* Center the image in the element */
 }
 
 .horizontal {
@@ -21,20 +24,22 @@
   right: 0;
 }
 
-/* Updated CSS styles for the inner gold bar */
+/* Styling for the Gold Bar */
 .gold-bar {
-  width: 90%; /* Adjusted width */
-  height: 500%; /* Adjusted height */
-  background-color: green;
+  background-image: url('Images/Simple green back.png'); /* Update with the correct path to your image */
+  background-size: cover; /* This will cover the entire area but maintain the aspect ratio */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the background image */
   position: absolute;
-  top: 30%; /* Adjusted position */
-  left: 5%; /* Adjusted position */
-  z-index: 9998; /* Ensure it's below the black bar */
-  display: flex; /* Added to make boxes appear horizontally */
-  justify-content: space-around; /* Added to evenly space boxes */
-  align-items: center; /* Added to center boxes vertically */
-  flex-direction: column; /* Arrange boxes from top to bottom */
-
+  top: 20%;
+  left: 5%;
+  right: 5%;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px; /* You can adjust this padding based on your design needs */
+  margin-bottom: 50px;
 }
 
 .intro, .email {
@@ -42,7 +47,7 @@
   font-size: 5px; /* Reset font size */
   margin-top: 35px; /* Move all text sections 25 pixels down */
   position: relative; /* Ensure text is positioned relative to the body */
-  padding: 40px 215px; /* Add padding to create space between text and side bars */
+  padding: 10px 215px; /* Add padding to create space between text and side bars */
 }
 
 .intro {
@@ -103,11 +108,11 @@ p {
 </div>
 
 <h2> 
-  <p>Here are my Models, the first a digital scene and the second a phisical sculpture that I both made, So far my main skills are still in game design more then modeling.</p>
+  <p>Here are my Models, the first a digital scene and the second a physical sculpture that I both made, So far my main skills are still in game design more than modeling.</p>
 </h2>
 
 <h2>
-  <p>but I learned alot about makeing riging and textureing too here are some of the objects I made and textured along with a sculpure I made by hand.
+  <p>but I learned a lot about making rigging and texturing too here are some of the objects I made and textured along with a sculpture I made by hand..
 </h2>
 
 <div class="email">
