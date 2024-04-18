@@ -38,13 +38,12 @@
 /* Styling for the gold bar section */
 .gold-bar {
   width: 90%; /* Keeps the width relative to the viewport width */
-  min-height: 300px; /* Minimum height to ensure visibility */
   background-image: url('Images/Simple blue back.png');
   background-size: cover; /* This will cover the entire area but maintain the aspect ratio */
   background-repeat: no-repeat;
   background-position: center; /* Center the background image */
   position: absolute;
-  top: 55%; /* Adjusted to eliminate any gap */
+  top: 27.5%; /* Adjusted to eliminate any gap */
   left: 5%; /* Consistent with the hyperlinks-bar */
   right: 5%; /* Consistent with the hyperlinks-bar */
   z-index: 9997; /* Ensure it does not overlap the hyperlinks-bar inappropriately */
@@ -139,35 +138,31 @@ p {
 }
 
 .hyperlinks-bar {
-  width: 90%; /* Match the width of the gold-bar */
+  width: 89%;
   background-color: gold;
   position: absolute;
-  top: 35%; /* Adjust this to align directly below or above the gold-bar */
-  left: 3%; /* Match the left margin of the gold-bar */
-  right: 5%; /* Match the right margin of the gold-bar */
+  top: 20%;
+  left: 4.5%;
+  right: 5%;
   z-index: 9998;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2vw; /* Padding can remain in vw for relative scaling */
   flex-wrap: wrap;
-  min-height: 195px; /* Minimum height to prevent vertical shrinkage */
+  padding: 20px;
 }
 
 .hyper-bar {
   display: block;
+  padding: 5px 20px; /* Adjusted padding for better visual */
+  margin: 0 10px; /* Ensure links don't touch */
   background-color: blue;
   color: white;
   text-decoration: none;
   text-align: center;
-  font-size: 2vw; /* Base font size for readability */
-  padding: 1vw 3vw; /* Substantial padding for larger touch area */
-  margin: 1vw auto; /* Center the links with auto margins */
-  min-width: 5vw; /* Minimum width for each link to ensure larger clickable area */
-  box-sizing: border-box; /* Includes padding and border in the width calculation */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  font-size: 36px; /* Adjustable font size for readability */
+  line-height: 1.5;
 }
-
 
 </style>
 </head>
