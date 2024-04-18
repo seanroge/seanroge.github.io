@@ -8,34 +8,45 @@
   height: 100%;
   position: fixed;
   z-index: 9999;
-  background-image: url('Images/Simple Design alt.png'); /* Path to your image file */
+  background-image: url('Images/Simple Design alt.png'); /* Ensure the path is correct */
   background-size: cover; /* Cover the entire area of the bar */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-position: center; /* Center the image in the element */
 }
 
-.vertical {
-  width: 5%; /* Smaller width */
-  height: 100%;
-  background-color: black;
-  position: fixed;
+.horizontal {
   top: 0;
-  right: 0; /* Change to right side */
-  z-index: 9999;
+  left: 0;
+  right: 0;
+  height: 5%;
+}
+
+.vertical {
+  top: 0;
+  bottom: 0;
+  width: 5%;
+}
+
+.vertical.left {
+  left: 0;
+}
+
+.vertical.right {
+  right: 0;
 }
 
 /* Updated CSS styles for the inner gold bar */
 
 .intro, .email {
   text-align: center;
-  font-size: 24px; /* Reset font size */
-  margin-top: 25px; /* Move all text sections 25 pixels down */
+  font-size: 24rem; /* Reset font size */
+  margin-top: 25rem; /* Move all text sections 25 pixels down */
   position: relative; /* Ensure text is positioned relative to the body */
-  padding: 400px 115px; /* Add padding to create space between text and side bars */
+  padding: 5rem 10rem; /* Add padding to create space between text and side bars */
 }
 
 .intro {
-  font-size: 72px; /* Triple font size for the first paragraph */
+  font-size: 5rem; /* Triple font size for the first paragraph */
 }
 
 body {
@@ -78,13 +89,48 @@ p {
   z-index: 9997; /* Ensure it's below the gold bar */
 }
 
+.hyperlinks-bar {
+  width: 89%;
+  background-color: gold;
+  position: absolute;
+  top: 20.3%;
+  left: 5%;
+  right: 5%;
+  z-index: 9998;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.hyper-bar {
+  display: block;
+  padding: 5px 20px; /* Adjusted padding for better visual */
+  margin: 0 10px; /* Ensure links don't touch */
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 36px; /* Adjustable font size for readability */
+  line-height: 1.5;
+}
+
 </style>
 </head>
 <body>
 
 <div class="horizontal"></div>
-<div class="vertical"></div>
-<div class="gold-bar">
+<div class="vertical left"></div>  <!-- This is for the left vertical bar -->
+<div class="vertical right"></div> <!-- This is for the right vertical bar -->
+<div class="hyperlinks-bar">
+  <!-- Hyperlinks within the gold bar -->
+  <a class="hyper-bar" href="artwork.html">Artwork</a>
+  <a class="hyper-bar" href="animation.html">Animation</a>
+  <a class="hyper-bar" href="about.html">About</a>
+  <a class="hyper-bar" href="models.html">Models</a>
+</div>
+
   <!-- New content for the gold bar with hyperlinks --></div>
 
 <div class="overlay"></div>

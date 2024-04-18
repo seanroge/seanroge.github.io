@@ -129,6 +129,32 @@ video {
     width: 100%; /* Full width for mobile devices */
     margin-bottom: 0;
   }
+} 
+.hyperlinks-bar {
+  width: 89%;
+  background-color: gold;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  right: 5%;
+  z-index: 9998;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.hyper-bar {
+  display: block;
+  padding: 5px 20px; /* Adjusted padding for better visual */
+  margin: 0 10px; /* Ensure links don't touch */
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 36px; /* Adjustable font size for readability */
+  line-height: 1.5;
 }
 </style>
 </head>
@@ -167,6 +193,13 @@ video {
 <div class="horizontal"></div>
 <div class="vertical left"></div>
 <div class="vertical right"></div>
+<div class="hyperlinks-bar">
+  <!-- Hyperlinks within the gold bar -->
+  <a class="hyper-bar" href="artwork.html">Artwork</a>
+  <a class="hyper-bar" href="animation.html">Animation</a>
+  <a class="hyper-bar" href="about.html">About</a>
+  <a class="hyper-bar" href="models.html">Models</a>
+</div>
 
 <div class="intro">
   <p>Video's!</p>

@@ -37,12 +37,12 @@
 
 /* Styling for the gold bar section */
 .gold-bar {
-  width: 90%; /* Takes 90% of the viewport width */
+  width: 89%; /* Takes 90% of the viewport width */
   min-height: 300px; /* Minimum height to ensure visibility */
   background-image: url('Images/Simple blue back.png'); /* Update with the correct path to your image */
   background-color: blue;
   position: absolute;
-  top: 20%; /* Position below the horizontal bar */
+  top: 27.9%; /* Position below the horizontal bar */
   left: 5%; /* Centering with equal margins */
   right: 5%; /* Maintain distance from the right side */
   z-index: 9998;
@@ -100,6 +100,33 @@ p {
   background-repeat: no-repeat; /* No repeat of the background image */
   background-position: center; /* Center the background image */
 }
+.hyperlinks-bar {
+  width: 89%;
+  background-color: gold;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  right: 5%;
+  z-index: 9998;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.hyper-bar {
+  display: block;
+  padding: 5px 20px; /* Adjusted padding for better visual */
+  margin: 0 10px; /* Ensure links don't touch */
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 36px; /* Adjustable font size for readability */
+  line-height: 1.5;
+}
+
 </style>
 </head>
 <body>
@@ -128,6 +155,13 @@ p {
 <div class="horizontal"></div>
 <div class="vertical left"></div>
 <div class="vertical right"></div>
+<div class="hyperlinks-bar">
+  <!-- Hyperlinks within the gold bar -->
+  <a class="hyper-bar" href="artwork.html">Artwork</a>
+  <a class="hyper-bar" href="animation.html">Animation</a>
+  <a class="hyper-bar" href="about.html">About</a>
+  <a class="hyper-bar" href="models.html">Models</a>
+</div>
 
 <div class="intro">
   <p>Artwork</p>
