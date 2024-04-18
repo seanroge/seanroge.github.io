@@ -2,39 +2,6 @@
 <html>
 <head>
 <style>
-/* General and Structural Styling */
-.horizontal, .vertical {
-  width: 5%;
-  height: 100%;
-  position: fixed;
-  z-index: 9999;
-  background-image: url('Images/Simple Design alt.png'); /* Ensure the path is correct */
-  background-size: cover; /* Cover the entire area of the bar */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: center; /* Center the image in the element */
-}
-
-.horizontal {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5%;
-}
-
-.vertical {
-  top: 0;
-  bottom: 0;
-  width: 5%;
-}
-
-.vertical.left {
-  left: 0;
-}
-
-.vertical.right {
-  right: 0;
-}
-
 /* Updated CSS styles for the inner gold bar */
 
 .intro, .email {
@@ -49,10 +16,6 @@
   font-size: 5rem; /* Triple font size for the first paragraph */
 }
 
-body {
-  background-color: #FFFFF0;
-  margin: 0; /* Remove default margin */
-}
 
 h1, h2, h3, p {
   color: blue; /* Change text color to blue */
@@ -85,17 +48,17 @@ p {
   height: 40%;
   position: fixed;
   top: 30%;
-  left: 5%;
+  left: 0%;
   z-index: 9997; /* Ensure it's below the gold bar */
 }
 
 .hyperlinks-bar {
-  width: 89%;
+  width: 100%;
   background-color: gold;
   position: absolute;
   top: 20.3%;
-  left: 5%;
-  right: 5%;
+  left: 0%;
+  right: 0%;
   z-index: 9998;
   display: flex;
   justify-content: space-around;
@@ -125,10 +88,11 @@ p {
 <div class="vertical right"></div> <!-- This is for the right vertical bar -->
 <div class="hyperlinks-bar">
   <!-- Hyperlinks within the gold bar -->
+  <a class="hyper-bar" href="index.html">Main</a>
   <a class="hyper-bar" href="artwork.html">Artwork</a>
   <a class="hyper-bar" href="animation.html">Animation</a>
-  <a class="hyper-bar" href="about.html">About</a>
   <a class="hyper-bar" href="models.html">Models</a>
+  <a class="hyper-bar" href="about.html">About</a>
 </div>
 
   <!-- New content for the gold bar with hyperlinks --></div>
@@ -136,11 +100,11 @@ p {
 <div class="overlay"></div>
 
 <div class="intro">
-  <p>Hi I am Sean Roge but you already read that on the first page. this is my profolio where I am compiling all my work both curent and future! although I plan to work as a game dev primarly, as im trying to finish out my first game right now.</p>
+  <p>Hi, I am Sean Roge.  This is only the start of my profolio where I will be compiling my work both current and future! I primarily plan to have a career as a game developer. I am currently in the process of finishing my first RPG game.</p>
 </div>
 
 <h2> 
-  <p>Thank you for visiting this site and looking at all my work on it!</p>
+  <p>Thank you for visiting this site and viewing my work!</p>
 </h2>
 
 <h2>
@@ -148,7 +112,7 @@ p {
 </h2>
 
 <div class="email">
-  <p>for further contact email Fake@notRealemailadress to contact me about this bio.</p>
+  <p></p>
 </div>
 
 </body>

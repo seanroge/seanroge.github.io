@@ -2,83 +2,32 @@
 <html>
 <head>
 <style>
-/* General and Structural Styling */
-.horizontal, .vertical {
-  width: 5%;
-  height: 100%;
-  position: fixed;
-  z-index: 9999;
-  background-image: url('Images/Simple Design alt.png'); /* Path to your image file */
-  background-size: cover; /* Cover the entire area of the bar */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: center; /* Center the image in the element */
-}
-
-.horizontal {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5%; /* Adjust the height as needed */
-}
-
-.vertical {
-  top: 0;
-  bottom: 0;
-  width: 5%;
-}
-
-.vertical.left {
-  left: 0;
-}
-
-.vertical.right {
-  right: 0;
-}
-
 .intro, .email {
   text-align: center;
   font-size: 1.5vw;
   margin-top: 1.5vw;
   position: relative;
-  padding: 10px 5%; /* Responsive padding */
-}
-
-body {
-  background-color: #FFFFF0;
-  margin: 0;
-  overflow-y: scroll;
+  padding: 1px 0%; /* Responsive padding */
 }
 
 h1, h2, h3, p {
-  color: blue;
+  color: darkblue;
   text-align: center;
   font-style: normal;
   margin: 0;
-}
-
-p {
-  font-family: Arial, Verdana, sans-serif;
 }
 
 .gold-link:hover {
   background-color: darkblue;
 }
 
-.email {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 10px 0;
-  background-color: #FFFFF0;
-}
-
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 90%;
+  width: 100%;
   height: 40vh;  /* Using vh to maintain relative scaling to the viewport height */
   position: fixed;
   top: 30vh;  /* Ensures vertical alignment starts predictably relative to the viewport */
-  left: 5%;   /* Matching left position with .gold-bar */
+  left: 0%;   /* Matching left position with .gold-bar */
   z-index: 9997;
 }
 
@@ -113,12 +62,12 @@ p {
 
 /* Styling for the gold bar */
 .gold-bar {
-  width: 90%;
+  width: 96.4%;
   background-color: gold;
   position: fixed;
   top: 40vh;  /* Changed from vw to vh for consistency */
-  left: 3%;   /* Adjusted to match .overlay */
-  right: 5%;  /* Adjusted to maintain symmetry */
+  left: 0%;   /* Adjusted to match .overlay */
+  right: 0%;  /* Adjusted to maintain symmetry */
   z-index: 9998;
   display: flex;
   justify-content: space-around;
@@ -129,8 +78,8 @@ p {
 
 @media (max-width: 480px) {
   .gold-link {
-    font-size: 16px; /* Even smaller font size for mobile devices */
-    padding: 15px 30px; /* Reduced padding */
+    font-size: 12vw; /* Even smaller font size for mobile devices */
+    padding: 5px 10px; /* Reduced padding */
     min-width: 200px; /* Further reduced minimum width for very small screens */
   }
 
@@ -142,16 +91,16 @@ p {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .gold-link {
-    font-size: 25px; /* Slightly smaller font size for smaller devices */
-    padding: 4px 35px; /* Slightly smaller padding */
+    font-size: 25vw; /* Slightly smaller font size for smaller devices */
+    padding: 4px 5px; /* Slightly smaller padding */
     min-width: 4px; /* Smaller minimum width */
   }
 }
 
 @media (max-width: 48vw) {
   .gold-link {
-    font-size: 25px; /* Slightly smaller font size for smaller devices */
-    padding: 4px 40px; /* Slightly smaller padding */
+    font-size: 25vw; /* Slightly smaller font size for smaller devices */
+    padding: 4px 4px; /* Slightly smaller padding */
     min-width: 4px; /* Smaller minimum width */
   }
 }
@@ -161,9 +110,12 @@ p {
   }
 }
 
-  .body {
-    font-size: 6vw; /* Smaller font size for mobile */
-  }
+.email {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1px 0;
+ }
 }
 </style>
 </head>
@@ -174,10 +126,11 @@ p {
 <div class="vertical right"></div>
 <div class="gold-bar">
   <!-- Hyperlinks within the gold bar -->
+  <a class="gold-link" href="index.html">Main</a>
   <a class="gold-link" href="artwork.html">Artwork</a>
   <a class="gold-link" href="animation.html">Animation</a>
-  <a class="gold-link" href="about.html">About</a>
   <a class="gold-link" href="models.html">Models</a>
+  <a class="gold-link" href="about.html">About</a>
 </div>
 
 <div class="overlay"></div>
@@ -186,12 +139,12 @@ p {
   <p>Sean Roge</p>
 </div>
 
-<div class="body">
-  <p>Video Game Design, Coding, and Artwork/Editing.</p>
+<div class="email">
+  <p>Video Game Design, Coding, and Artwork/Editing</p>
 </div>
 
 <div class="email">
-  <p>For further contact email sean@roge.me to contact me about this bio.</p>
+  <p>sean@roge.me</p>
 </div>
 
 </body>

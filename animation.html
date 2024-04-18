@@ -20,38 +20,28 @@
   margin-bottom: 50px;
 }
 
+/* Intro and email div styles */
 .intro, .email {
   text-align: center;
-  font-size: 45px;
-  margin-top: 45px;
+  font-size: 3vw; /* Standard font size */
+  margin-top: 25px; /* Margin to separate from other elements */
   position: relative;
-  padding: 20px 5%;
+  padding: 10px 10%; /* Adjusted padding for consistency */
 }
 
-.intro {
+.body {
   text-align: center;
-  font-size: 88px; /* Ensuring a large font size */
-  margin-top: 25px; /* Space above the text */
-  position: relative;
-  padding: 20px 5%; /* Ample padding and proportional horizontal padding */
-  color: red; /* Temporarily changing color to test if this CSS is applied */
-}
-
-body {
-  background-color: #FFFFF0;
-  margin: 0;
-  overflow-y: scroll;
+  font-size: 2vw;  /* Responsive font size for introductory text */
+  width: 90%;  /* Max width to fit within the viewport */
+  margin: 20px auto;  /* Centering intro text */
+  padding: 1px; /* Padding for spacing */
 }
 
 h1, h2, h3, p {
-  color: blue;
+  color: darkblue;
   text-align: center;
   font-style: normal;
   margin: 0;
-}
-
-p {
-  font-family: Arial, Verdana, sans-serif;
 }
 
 /* Video Styling */
@@ -89,6 +79,7 @@ video {
     margin-bottom: 0;
   }
 } 
+
 .hyperlinks-bar {
   width: 100%;
   background-color: gold;
@@ -154,19 +145,20 @@ video {
 <div class="vertical right"></div>
 <div class="hyperlinks-bar">
   <!-- Hyperlinks within the gold bar -->
+  <a class="hyper-bar" href="index.html">Main</a>
   <a class="hyper-bar" href="artwork.html">Artwork</a>
   <a class="hyper-bar" href="animation.html">Animation</a>
-  <a class="hyper-bar" href="about.html">About</a>
   <a class="hyper-bar" href="models.html">Models</a>
+  <a class="hyper-bar" href="about.html">About</a>
 </div>
 
 <div class="intro">
-  <p>Video's!</p>
+  <p>Video's</p>
 </div>
 
-<h2>
+<div class="body">
   <p> Animated videos demonstrating animation and modeling.</p>
-</h2>
+</div>
 
 </body>
 </html>
