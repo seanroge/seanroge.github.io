@@ -19,7 +19,6 @@
   left: 0;
   right: 0;
   height: 5%; /* Adjust the height as needed */
-  background-image: url('path/to/your/horizontal-image.jpg'); /* Specific image for horizontal bar */
 }
 
 .vertical {
@@ -76,10 +75,10 @@ p {
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   width: 90%;
-  height: 40%;
+  height: 40vh;  /* Using vh to maintain relative scaling to the viewport height */
   position: fixed;
-  top: 30vh;
-  left: 5%;
+  top: 30vh;  /* Ensures vertical alignment starts predictably relative to the viewport */
+  left: 5%;   /* Matching left position with .gold-bar */
   z-index: 9997;
 }
 
@@ -116,16 +115,16 @@ p {
 .gold-bar {
   width: 90%;
   background-color: gold;
-  position: absolute;
-  top: 40vh;
-  left: 3%;
-  right: 15%;
+  position: fixed;
+  top: 40vh;  /* Changed from vw to vh for consistency */
+  left: 3%;   /* Adjusted to match .overlay */
+  right: 5%;  /* Adjusted to maintain symmetry */
   z-index: 9998;
   display: flex;
-  justify-content: space-around; /* Distributes children evenly */
+  justify-content: space-around;
   align-items: center;
-  padding: 2vw; /* Padding inside the gold bar */
-  flex-wrap: wrap; /* Allows items to wrap as needed */
+  padding: 2vw;  /* Padding can remain in vw for relative scaling */
+  flex-wrap: wrap;
 }
 
 @media (max-width: 480px) {

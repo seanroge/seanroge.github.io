@@ -37,20 +37,30 @@
 
 /* Styling for the gold bar section */
 .gold-bar {
-  width: 89%; /* Takes 90% of the viewport width */
+  width: 90%; /* Keeps the width relative to the viewport width */
   min-height: 300px; /* Minimum height to ensure visibility */
-  background-image: url('Images/Simple blue back.png'); /* Update with the correct path to your image */
-  background-color: blue;
+  background-image: url('Images/Simple blue back.png');
+  background-size: cover; /* This will cover the entire area but maintain the aspect ratio */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the background image */
   position: absolute;
-  top: 27.9%; /* Position below the horizontal bar */
-  left: 5%; /* Centering with equal margins */
-  right: 5%; /* Maintain distance from the right side */
-  z-index: 9998;
-  display: grid; /* Using grid layout */
-  grid-template-columns: repeat(4, 1fr); /* Four columns */
-  grid-gap: 20px; /* Gap between elements */
-  padding: 20px; /* Padding inside the gold bar */
-  margin-bottom: 500px; /* Bottom margin to create space */
+  top: 55%; /* Adjusted to eliminate any gap */
+  left: 5%; /* Consistent with the hyperlinks-bar */
+  right: 5%; /* Consistent with the hyperlinks-bar */
+  z-index: 9997; /* Ensure it does not overlap the hyperlinks-bar inappropriately */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid setup */
+  grid-auto-rows: minmax(150px, auto); /* Ensures rows have a minimum height but can grow */
+  grid-gap: 15px; /* Gap between elements */
+  padding: 55px; /* Padding inside the gold bar */
+  margin-bottom: 50px; /* Bottom margin to create space */
+  box-sizing: border-box; /* Include padding and border in the element's dimensions */
+}
+
+@media (min-width: 800px) {
+  .gold-bar {
+    grid-template-columns: repeat(4, 1fr); /* Ensures no more than 4 columns */
+  }
 }
 
 /* Intro and email div styles */
@@ -59,11 +69,37 @@
   font-size: 24px; /* Standard font size */
   margin-top: 25px; /* Margin to separate from other elements */
   position: relative;
-  padding: 10px 115px; /* Internal spacing */
+  padding: 10px 10%; /* Adjusted padding for consistency */
 }
 
 .intro {
-  font-size: 82px; /* Larger font size for emphasis */
+  font-size: 6vw; /* Responsive font size for mobile */
+  width: 80%; /* Adjusted width for better layout control */
+  margin: auto; /* Center align the div within its container */
+}
+
+.email {
+  font-size: 24px; /* Ensure font size is consistent for email */
+  width: 80%; /* Adjusted width for better layout control */
+  margin: auto; /* Center align the div within its container */
+  position: fixed;
+  bottom: 10px; /* Align at the bottom with a buffer */
+  left: 10%; /* Buffer from the left side */
+  right: 10%; /* Buffer from the right side */
+  background-color: #FFFFF0; /* Ensure it's visible over other content */
+}
+
+.body {
+  font-size: 2vw; /* Responsive font size for mobile */
+  width: 80%; /* Adjusted width for better layout control */
+  margin: 2px auto; /* Center align and provide vertical spacing */
+}
+
+/* Ensures consistent styling and avoids overlap */
+@media (max-width: 768px) {
+  .intro, .email, .body {
+    font-size: 5vw; /* Slightly smaller font size for smaller devices */
+  }
 }
 
 .email {
@@ -94,38 +130,44 @@ p {
 
 /* Styling for gold boxes with images */
 .gold-box {
-  width: 515px; /* Box width */
-  height: 430px; /* Box height */
-  background-size: 100% 100%; /* Adjust background size to fill area */
+  width: 100%; /* Box width responsive to the grid column width */
+  height: auto; /* Height adjusted to maintain aspect ratio */
+  aspect-ratio: 4 / 3; /* Maintain a consistent aspect ratio for all images */
+  background-size: cover; /* Adjust background size to cover the content area */
   background-repeat: no-repeat; /* No repeat of the background image */
   background-position: center; /* Center the background image */
 }
+
 .hyperlinks-bar {
-  width: 89%;
+  width: 90%; /* Match the width of the gold-bar */
   background-color: gold;
   position: absolute;
-  top: 20%;
-  left: 5%;
-  right: 5%;
+  top: 35%; /* Adjust this to align directly below or above the gold-bar */
+  left: 3%; /* Match the left margin of the gold-bar */
+  right: 5%; /* Match the right margin of the gold-bar */
   z-index: 9998;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 2vw; /* Padding can remain in vw for relative scaling */
   flex-wrap: wrap;
-  padding: 20px;
+  min-height: 195px; /* Minimum height to prevent vertical shrinkage */
 }
 
 .hyper-bar {
   display: block;
-  padding: 5px 20px; /* Adjusted padding for better visual */
-  margin: 0 10px; /* Ensure links don't touch */
   background-color: blue;
   color: white;
   text-decoration: none;
   text-align: center;
-  font-size: 36px; /* Adjustable font size for readability */
-  line-height: 1.5;
+  font-size: 2vw; /* Base font size for readability */
+  padding: 1vw 3vw; /* Substantial padding for larger touch area */
+  margin: 1vw auto; /* Center the links with auto margins */
+  min-width: 5vw; /* Minimum width for each link to ensure larger clickable area */
+  box-sizing: border-box; /* Includes padding and border in the width calculation */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
+
 
 </style>
 </head>
@@ -167,16 +209,12 @@ p {
   <p>Artwork</p>
 </div>
 
-<h2>
+<div class="body">
   <p>My Education is largely based on digital media as such here are all the artwork and drawings I made.</p>
-</h2>
-
-<h2>
-  <p>Although im not the best out there, I can make sprite sheets and placeholder art for any project im a part of.</p>
-</h2>
+</div>
 
 <div class="email">
-  <p>For further contact, email Fake@notRealemailadress to contact me about this bio.</p>
+  <p>For further contact, email sean@roge.me to contact me about this bio.</p>
 </div>
 
 </body>
