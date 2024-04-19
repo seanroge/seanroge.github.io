@@ -20,20 +20,36 @@
   margin-bottom: 50px;
 }
 
-.intro {
+/* Intro and email div styles */
+.intro, .email {
   text-align: center;
+  font-size: 24px; /* Standard font size */
+  margin-top: 25px; /* Margin to separate from other elements */
+  position: relative;
+  padding: 10px 10%; /* Adjusted padding for consistency */
+}
+
+.intro {
+   text-align: center;
   font-size: 3vw;  /* Responsive font size for introductory text */
   width: 90%;  /* Max width to fit within the viewport */
   margin: 20px auto;  /* Centering intro text */
   padding: 10px; /* Padding for spacing */
 }
-  
+
 .body {
   text-align: center;
   font-size: 2vw;  /* Responsive font size for introductory text */
   width: 90%;  /* Max width to fit within the viewport */
   margin: 20px auto;  /* Centering intro text */
   padding: 1px; /* Padding for spacing */
+}
+
+/* Ensures consistent styling and avoids overlap */
+@media (max-width: 768px) {
+  .intro, .email, .body {
+    font-size: 5vw; /* Slightly smaller font size for smaller devices */
+  }
 }
 
 h1, h2, h3, p {
@@ -53,31 +69,6 @@ video {
   width: 100%; /* Ensures the video scales correctly */
   height: auto; /* Maintains the aspect ratio */
 }
-
-/* Media Queries for Smaller Devices */
-@media (max-width: 768px) {
-  .intro {
-    font-size: 36px; /* Smaller font size for tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .intro {
-    font-size: 24px; /* Smaller font size for phones */
-  }
-
-  .horizontal, .vertical {
-    display: none; /* Hide bars on very small screens */
-  }
-
-  .gold-bar {
-    top: 0; /* Adjust the top to accommodate mobile viewing */
-    left: 0;
-    right: 0;
-    width: 100%; /* Full width for mobile devices */
-    margin-bottom: 0;
-  }
-} 
 
 .hyperlinks-bar {
   width: 100%;

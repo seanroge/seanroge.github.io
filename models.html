@@ -29,8 +29,17 @@
   margin-bottom: 20px;  /* Space between items */
 }
 
-.intro {
+/* Intro and email div styles */
+.intro, .email {
   text-align: center;
+  font-size: 24px; /* Standard font size */
+  margin-top: 25px; /* Margin to separate from other elements */
+  position: relative;
+  padding: 10px 10%; /* Adjusted padding for consistency */
+}
+
+.intro {
+   text-align: center;
   font-size: 3vw;  /* Responsive font size for introductory text */
   width: 90%;  /* Max width to fit within the viewport */
   margin: 20px auto;  /* Centering intro text */
@@ -43,6 +52,13 @@
   width: 90%;  /* Max width to fit within the viewport */
   margin: 20px auto;  /* Centering intro text */
   padding: 1px; /* Padding for spacing */
+}
+
+/* Ensures consistent styling and avoids overlap */
+@media (max-width: 768px) {
+  .intro, .email, .body {
+    font-size: 5vw; /* Slightly smaller font size for smaller devices */
+  }
 }
 
 .hyperlinks-bar {
